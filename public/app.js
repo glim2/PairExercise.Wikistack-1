@@ -11,7 +11,8 @@ const { db, Page, User } = require('../models')
 
 async function init () {
   try {
-    await db.sync({force: true});
+    await Page.sync();
+    await User.sync();
   } catch (error) {
 
   }
